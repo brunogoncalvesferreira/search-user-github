@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <script src="https://unpkg.com/phosphor-icons"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search Github</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="App">
+      <header>
+        <h1>devfinder</h1>
+        <button>
+          Light
+          <i class="ph-sun"></i>
+        </button>
+      </header>
+
+      <main>
+        <div class="wrapper-input">
+          <i class="ph-magnifying-glass"></i>
+          <input type="text" placeholder="Search Github username..." />
+          <button>Search</button>
+        </div>
+
+        <div class="content-profile">
+          <div class="avatar">
+            <img
+              src="https://github.com/brunogoncalvesferreira.png"
+              alt="Imagem de perfil do github de um usuário"
+            />
+          </div>
+
+          <div class="info-profile">
+            <div class="header-profile">
+              <div class="info-user">
+                <h2>Bruno Gonçalves</h2>
+                <strong>@brunogonferreira</strong>
+                <p>This profile has no bio</p>
+              </div>
+              <div class="date"><small>Joined 25 Jan 2011</small></div>
+            </div>
+
+            <div class="repos-followers-following">
+              <div class="repos">
+                <strong>Repos</strong>
+                <p>8</p>
+              </div>
+
+              <div class="followers">
+                <strong>Followers</strong>
+                <p>3932</p>
+              </div>
+
+              <div class="following">
+                <strong>Following</strong>
+                <p>9</p>
+              </div>
+            </div>
+
+            <div class="outher-infos">
+              <div>
+                <i class="ph-map-pin"></i>
+                <p>Juiz de Fora - MG Brazil</p>
+              </div>
+
+              <div>
+                <i class="ph-twitter-logo"></i>
+                <p>Twitter</p>
+              </div>
+
+              <div>
+                <i class="ph-link"></i>
+                <p>https://github.blog</p>
+              </div>
+
+              <div>
+                <i class="ph-buildings"></i>
+                <p>@rocketseat</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
