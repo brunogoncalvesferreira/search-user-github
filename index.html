@@ -16,7 +16,7 @@
   </head>
 
   <body class="flex items-center justify-center h-screen bg-gray-900 font-mono">
-    <div id="app" class="max-w-2xl w-5/6 py-4">
+    <div id="app" class="max-w-3xl w-5/6 py-4">
       <header class="flex justify-between items-center">
         <h1 class="text-gray-200 text-2xl">devfinder</h1>
         <button class="flex items-center gap-1 text-gray-200 cursor-pointer">
@@ -35,6 +35,7 @@
           placeholder="Name Github"
         />
         <button
+          id="buttonGetUserName"
           class="w-20 h-10 absolute bg-blue-700 hover:bg-blue-600 transition rounded-md right-2 top-2 text-gray-200 cursor-pointer"
         >
           Search
@@ -44,8 +45,9 @@
       <div class="mt-4 p-4 bg-gray-800 rounded-lg flex gap-4 max-md:flex-col">
         <div>
           <img
+            id="avatar"
             class="w-24 border-4 border-blue-700 rounded-full outline outline-6 outline-gray-200 max-md:m-auto"
-            src="https://github.com/brunogoncalvesferreira.png"
+            src="https://play-lh.googleusercontent.com/PCpXdqvUWfCW1mXhH1Y_98yBpgsWxuTSTofy3NGMo9yBTATDyzVkqU580bfSln50bFU"
             alt="Imagem de perfil do github de um usuário"
           />
         </div>
@@ -56,19 +58,22 @@
           >
             <div class="flex flex-col gap-2">
               <h2
+                id="name"
                 class="text-gray-200 text-2xl max-md:text-sm max-md:text-center"
               >
                 Bruno Gonçalves
               </h2>
-              <strong class="text-blue-700 text-sm max-md:text-center"
+              <strong
+                id="login"
+                class="text-blue-700 text-sm max-md:text-center"
                 >@brunogonferreira</strong
               >
-              <p class="text-gray-700 text-sm max-md:text-center">
+              <p id="bio" class="text-gray-700 text-sm max-md:text-center">
                 This profile has no bio
               </p>
             </div>
             <div class="text-gray-400 text-lg">
-              <small class="max-md:text-sm max-md:text-center block"
+              <small id="date" class="max-md:text-sm max-md:text-center block"
                 >Joined 25 Jan 2011</small
               >
             </div>
@@ -79,39 +84,39 @@
           >
             <div class="text-gray-200">
               <strong class="text-gray-500">Repos</strong>
-              <p class="font-bold">8</p>
+              <p id="repos" class="font-bold">8</p>
             </div>
 
             <div class="text-gray-200">
               <strong class="text-gray-500">Followers</strong>
-              <p class="font-bold">3932</p>
+              <p id="followers" class="font-bold">3932</p>
             </div>
 
             <div class="text-gray-200">
               <strong class="text-gray-500">Following</strong>
-              <p class="font-bold">9</p>
+              <p id="following" class="font-bold">9</p>
             </div>
           </div>
 
           <div class="grid grid-cols-2 gap-x-20 gap-4 mt-6 max-md:grid-cols-1">
             <div class="flex items-center gap-2">
               <i class="ph-map-pin text-gray-200"></i>
-              <p class="text-sm text-gray-200">Juiz de Fora</p>
+              <p id="locale" class="text-sm text-gray-200">Juiz de Fora</p>
             </div>
 
             <div class="flex items-center gap-2">
               <i class="ph-twitter-logo text-gray-200"></i>
-              <p class="text-sm text-gray-200">Twitter</p>
+              <p id="social" class="text-sm text-gray-200">Twitter</p>
             </div>
 
             <div class="flex items-center gap-2">
               <i class="ph-link text-gray-200"></i>
-              <p class="text-sm text-gray-200">https://github.blog</p>
+              <p id="page" class="text-sm text-gray-200">https://github.blog</p>
             </div>
 
             <div class="flex items-center gap-2">
               <i class="ph-buildings text-gray-200"></i>
-              <p class="text-sm text-gray-200">@rocketseat</p>
+              <p id="jobs" class="text-sm text-gray-200">@rocketseat</p>
             </div>
           </div>
         </div>
