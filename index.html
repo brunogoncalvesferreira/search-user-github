@@ -19,6 +19,7 @@
     class="flex items-center justify-center h-full bg-gray-900 text-gray-200 font-mono"
   >
     <div id="app" class="max-w-3xl w-5/6 py-4 mt-20 max-md:mt-6">
+      <!--header como title é button modo dark e light-->
       <header class="flex justify-between items-center">
         <h1 class="text-2xl">devfinder</h1>
 
@@ -26,10 +27,11 @@
           id="modeDarkLight"
           class="flex items-center gap-1 cursor-pointer"
         >
-          Dark <i class="ph-moon"></i>
+          Light <i class="ph-sun"></i>
         </button>
       </header>
 
+      <!--form para buscar usuário-->
       <form>
         <div class="relative mt-4">
           <i
@@ -52,6 +54,7 @@
         </div>
       </form>
 
+      <!--Container onde recebemos os dados da API do github-->
       <div
         id="container"
         class="mt-4 p-12 bg-gray-800 rounded-lg flex gap-16 max-md:flex-col"
@@ -83,11 +86,16 @@
                 >user name
               </strong>
 
-              <p id="bio" class="text-gray-700 text-sm max-md:text-center w-64">
+              <p
+                id="bio"
+                class="text-gray-700 font-bold text-sm max-md:text-center w-64 max-md:w-full"
+              >
                 This profile has no bio
               </p>
             </div>
-            <div class="text-lg flex items-center gap-2 max-md:m-auto">
+            <div
+              class="text-lg flex items-center gap-2 max-md:m-auto max-md:flex-col"
+            >
               <small class="text-sm">No Github desde</small>
 
               <small id="date" class="max-md:text-sm max-md:text-center block"
@@ -137,7 +145,7 @@
             <div class="flex items-center gap-2">
               <i class="ph-link"></i>
 
-              <p id="page" class="text-sm">page</p>
+              <p id="page" class="max-md:max-w-xs max-md:w-4/5 text-sm">page</p>
             </div>
 
             <div class="flex items-center gap-2">

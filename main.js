@@ -8,7 +8,7 @@ buttonModeDarkLight.addEventListener("click", handleModeLightAndDark)
 function handleModeLightAndDark() {
   document.body.classList.toggle("bg-gray-400")
   document.body.classList.toggle("text-gray-900")
-  input.classList.toggle("bg-gray-600")
+  document.querySelector("input").classList.toggle("bg-gray-600")
   document.querySelector("#container").classList.toggle("bg-gray-600")
   document.querySelector("#container-repos").classList.toggle("bg-gray-400")
   document.querySelector("#container-repos").classList.toggle("text-gray-700")
@@ -20,10 +20,10 @@ function handleModeLightAndDark() {
     .classList.toggle("hover:bg-green-600")
   document.querySelector("#avatar").classList.toggle("border-green-500")
 
-  if (buttonModeDarkLight.innerHTML === 'Light <i class="ph-sun"></i>') {
-    buttonModeDarkLight.innerHTML = 'Dark <i class="ph-moon"></i>'
-  } else {
+  if (buttonModeDarkLight.innerHTML === 'Dark <i class="ph-moon"></i>') {
     buttonModeDarkLight.innerHTML = 'Light <i class="ph-sun"></i>'
+  } else {
+    buttonModeDarkLight.innerHTML = 'Dark <i class="ph-moon"></i>'
   }
 }
 
@@ -60,7 +60,6 @@ function handleGetUserGithub() {
     document.querySelector("#social").innerHTML = data.twitter_username
     document.querySelector("#page").innerHTML = data.blog
     document.querySelector("#jobs").innerHTML = data.company
-    console.log(data)
   }
   fetchData()
 }
