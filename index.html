@@ -15,34 +15,47 @@
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
 
-  <body class="flex items-center justify-center h-screen bg-gray-900 font-mono">
-    <div id="app" class="max-w-3xl w-5/6 py-4">
+  <body
+    class="flex items-center justify-center h-full bg-gray-900 text-gray-200 font-mono"
+  >
+    <div id="app" class="max-w-3xl w-5/6 py-4 mt-20 max-md:mt-6">
       <header class="flex justify-between items-center">
-        <h1 class="text-gray-200 text-2xl">devfinder</h1>
-        <button class="flex items-center gap-1 text-gray-200 cursor-pointer">
-          Light
-          <i class="ph-sun"></i>
+        <h1 class="text-2xl">devfinder</h1>
+
+        <button
+          id="modeDarkLight"
+          class="flex items-center gap-1 cursor-pointer"
+        >
+          Dark <i class="ph-moon"></i>
         </button>
       </header>
 
-      <div class="relative mt-4">
-        <i
-          class="ph-magnifying-glass absolute top-3 left-4 text-3xl text-blue-700"
-        ></i>
-        <input
-          class="w-full py-4 pl-16 pr-28 bg-gray-800 rounded-md text-gray-200 max-md:text-small"
-          type="text"
-          placeholder="Name Github"
-        />
-        <button
-          id="buttonGetUserName"
-          class="w-20 h-10 absolute bg-blue-700 hover:bg-blue-600 transition rounded-md right-2 top-2 text-gray-200 cursor-pointer"
-        >
-          Search
-        </button>
-      </div>
+      <form>
+        <div class="relative mt-4">
+          <i
+            id="icon-search"
+            class="ph-magnifying-glass absolute top-3 left-4 text-3xl text-blue-700"
+          ></i>
 
-      <div class="mt-4 p-4 bg-gray-800 rounded-lg flex gap-4 max-md:flex-col">
+          <input
+            class="w-full py-4 pl-16 pr-28 bg-gray-800 text-gray-100 rounded-md max-md:text-small outline-none"
+            type="text"
+            placeholder="Name Github"
+          />
+
+          <button
+            id="buttonGetUserName"
+            class="w-20 h-10 absolute bg-blue-700 hover:bg-blue-600 transition rounded-md right-2 top-2 cursor-pointer flex items-center justify-center text-gray-100"
+          >
+            Search
+          </button>
+        </div>
+      </form>
+
+      <div
+        id="container"
+        class="mt-4 p-12 bg-gray-800 rounded-lg flex gap-16 max-md:flex-col"
+      >
         <div>
           <img
             id="avatar"
@@ -54,69 +67,83 @@
 
         <div>
           <div
-            class="flex gap-24 justify-between m-auto w-full max-md:flex-col max-md:gap-4"
+            class="flex items-start justify-between m-auto w-full max-md:flex-col max-md:gap-4"
           >
-            <div class="flex flex-col gap-2">
+            <div class="flex flex-col gap-2 max-md:m-auto">
               <h2
                 id="name"
-                class="text-gray-200 text-2xl max-md:text-sm max-md:text-center"
+                class="text-2xl max-md:text-sm w-64 max-md:text-center max-md:w-full"
               >
-                Bruno Gonçalves
+                name
               </h2>
+
               <strong
                 id="login"
                 class="text-blue-700 text-sm max-md:text-center"
-                >@brunogonferreira</strong
-              >
-              <p id="bio" class="text-gray-700 text-sm max-md:text-center">
+                >user name
+              </strong>
+
+              <p id="bio" class="text-gray-700 text-sm max-md:text-center w-64">
                 This profile has no bio
               </p>
             </div>
-            <div class="text-gray-400 text-lg">
+            <div class="text-lg flex items-center gap-2 max-md:m-auto">
+              <small class="text-sm">No Github desde</small>
+
               <small id="date" class="max-md:text-sm max-md:text-center block"
-                >Joined 25 Jan 2011</small
-              >
+                >dd/mm/aaaa
+              </small>
             </div>
           </div>
 
           <div
-            class="mt-8 bg-gray-900 flex justify-center gap-16 p-6 rounded-md max-md:gap-4"
+            id="container-repos"
+            class="mt-8 bg-gray-900 flex justify-center gap-16 p-6 rounded-md max-md:gap-4 max-md:flex-col"
           >
-            <div class="text-gray-200">
-              <strong class="text-gray-500">Repos</strong>
-              <p id="repos" class="font-bold">8</p>
+            <div>
+              <strong class="">Repos</strong>
+
+              <p id="repos" class="font-bold">0</p>
             </div>
 
-            <div class="text-gray-200">
-              <strong class="text-gray-500">Followers</strong>
-              <p id="followers" class="font-bold">3932</p>
+            <div>
+              <strong class="">Followers</strong>
+
+              <p id="followers" class="font-bold">0</p>
             </div>
 
-            <div class="text-gray-200">
-              <strong class="text-gray-500">Following</strong>
-              <p id="following" class="font-bold">9</p>
+            <div>
+              <strong class="">Following</strong>
+
+              <p id="following" class="font-bold">0</p>
             </div>
           </div>
 
-          <div class="grid grid-cols-2 gap-x-20 gap-4 mt-6 max-md:grid-cols-1">
+          <div
+            class="grid grid-cols-2 gap-x-24 gap-y-6 mt-6 max-md:grid-cols-1"
+          >
             <div class="flex items-center gap-2">
-              <i class="ph-map-pin text-gray-200"></i>
-              <p id="locale" class="text-sm text-gray-200">Juiz de Fora</p>
+              <i class="ph-map-pin"></i>
+
+              <p id="locale" class="text-sm">locality</p>
             </div>
 
             <div class="flex items-center gap-2">
-              <i class="ph-twitter-logo text-gray-200"></i>
-              <p id="social" class="text-sm text-gray-200">Twitter</p>
+              <i class="ph-twitter-logo"></i>
+
+              <p id="social" class="text-sm">Twitter</p>
             </div>
 
             <div class="flex items-center gap-2">
-              <i class="ph-link text-gray-200"></i>
-              <p id="page" class="text-sm text-gray-200">https://github.blog</p>
+              <i class="ph-link"></i>
+
+              <p id="page" class="text-sm">page</p>
             </div>
 
             <div class="flex items-center gap-2">
-              <i class="ph-buildings text-gray-200"></i>
-              <p id="jobs" class="text-sm text-gray-200">@rocketseat</p>
+              <i class="ph-buildings"></i>
+
+              <p id="jobs" class="text-sm">work</p>
             </div>
           </div>
         </div>
